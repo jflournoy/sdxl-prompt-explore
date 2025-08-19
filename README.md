@@ -94,6 +94,26 @@ python generate-candidates.py
 
 ---
 
+## Pairwise Image Ranking Tool
+
+This repo also contains `rank.py`, a Flask-based web app for **pairwise ranking of images** using [TrueSkill](https://trueskill.org/) and graph-based inference.  
+Upload your image metadata (JSON + image files), compare images side by side, and the system updates rankings in real time with virtual matches propagating through a comparison graph.  
+
+### Features
+- Interactive **pairwise voting UI** (keyboard shortcuts included).
+- **TrueSkill ratings** (μ, σ) update automatically after each vote.
+- **Virtual matches** inferred from transitive comparisons.
+- **Live visualizations**:
+  - μ–σ scatter plot with rank annotations.
+  - Comparison network graph with weighted edges.
+- Undo, reset, and **export of ranked results** back to JSON.
+- Supports `.png`, `.jpg`, `.jpeg`, and `.gif`.
+
+This project is framework-agnostic: it makes no assumptions about the content of your images or prompts. If desired, you can add filters to handle specific domains (e.g., skip NSFW prompts).
+
+
+---
+
 ## Project Structure
 - `generate-candidates.py` — Main pipeline for generating, refining, and scoring prompts.  
 - `models/` — Expected directory for SDXL checkpoints and LoRA adapters.  
