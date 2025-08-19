@@ -109,9 +109,6 @@ Upload your image metadata (JSON + image files), compare images side by side, an
 - Undo, reset, and **export of ranked results** back to JSON.
 - Supports `.png`, `.jpg`, `.jpeg`, and `.gif`.
 
-This project is framework-agnostic: it makes no assumptions about the content of your images or prompts. If desired, you can add filters to handle specific domains (e.g., skip NSFW prompts).
-
-
 ---
 
 ## Project Structure
