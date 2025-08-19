@@ -46,6 +46,14 @@ pip install diffusers transformers accelerate safetensors pillow
 pip install llama-cpp-python colorlog
 ```
 
+### 4. Download models, loras, etc
+
+You need to have some idea of how SDXL works. Grab some checkpoints, or loras from various online sources.
+
+### 5. Update the python script
+
+There are a lot of things to tweak in this script. Set the correct paths to your checkpoint, LORAs, set LORA options, add prompts. You can change the examples the various models get of good "what" and "how" prompts.
+
 ---
 
 ## Hugging Face Token Setup
@@ -56,11 +64,11 @@ You must set your HF token before running:
 ```bash
 huggingface-cli login
 # OR set environment variable
-export HUGGINGFACE_HUB_TOKEN=hf_your_token_here
+export HF_TOKEN=hf_your_token_here
 ```
 
 If you don’t have a token yet, create one at:  
-👉 https://huggingface.co/settings/tokens
+- https://huggingface.co/settings/tokens
 
 ---
 
